@@ -72,7 +72,15 @@ const CardRander = (props) => {
           onClick={() => navigate(`/productdetails/${id}`)}
           className=" p-4 min-h-[200px] mt-7 flex justify-center items-center "
         >
-          <img className="h-[150px] object-contain" src={imageUrl} alt="" />
+          <img
+            className="h-[150px] object-contain"
+            src={
+              !imageUrl
+                ? imageUrl
+                : "https://www.stroiopttorg.ru/wp-content/uploads/woocommerce-placeholder-303x303.webp"
+            }
+            alt=""
+          />
         </div>
         <div
           onClick={() => navigate(`/productdetails/${id}`)}

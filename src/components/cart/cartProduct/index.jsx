@@ -20,7 +20,11 @@ const CartProduct = (props) => {
     <>
       <div className="grid grid-cols-[2.5fr_1fr_1fr_1fr] max-[600px]:grid-cols-3 max-[390px]:grid-cols-3 max-[322px]:grid-cols-1 max-[689px]:grid-cols-[2fr_1fr_1fr_1fr] gap-4 items-center p-2 bg-gray-50 rounded-lg">
         <div className="flex items-center gap-4 max-[600px]:col-span-3 max-[390px]:col-span-2">
-          <img src={imageUrl} alt="Product" className="w-16 h-16 rounded-lg" />
+          <img  src={
+              !imageUrl
+                ? imageUrl
+                : "https://www.stroiopttorg.ru/wp-content/uploads/woocommerce-placeholder-303x303.webp"
+            } alt="https://www.stroiopttorg.ru/wp-content/uploads/woocommerce-placeholder-303x303.webp" className="w-16 h-16 rounded-lg" />
           <div>
             <p className="font-medium max-[817px]:line-clamp-2 ellipsis">
               {name}

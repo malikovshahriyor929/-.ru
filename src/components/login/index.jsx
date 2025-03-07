@@ -59,7 +59,7 @@ const Login = () => {
   let tokenToast = () => toast.success("Siz muvaffaqiyatli kirdingiz");
   function formData({ email, password }) {
     data.filter((value) => {
-      if (value.email === email && value.password === password) {
+      if (value.email === "admin@gmail.com" && value.password === "admin123") {
         localStorage.setItem("token", JSON.stringify(value));
         setCheck(true);
         navigate("/admin");

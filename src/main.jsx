@@ -5,15 +5,13 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router/index.jsx";
 import MainContext from "./context/mainContext/index.jsx";
 import { ToastContainer } from "react-toastify";
-import { Analytics } from "@vercel/analytics/react"
 
-
+//vercel deploy
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <MainContext>
       <RouterProvider router={router} />
       <ToastContainer />
     </MainContext>
-    <Analytics/>
   </StrictMode>
 );
